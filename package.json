@@ -1,0 +1,26 @@
+{
+  "name": "karoo",
+  "version": "0.0.1",
+  "description": "CLI tool for canary",
+  "main": "karoo.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarrow/karoo.git"
+  },
+  "author": "Thomas Arrow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarrow/karoo/issues"
+  },
+  "homepage": "https://github.com/tarrow/karoo#readme",
+  "devDependencies": {
+    "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "canary-perch": "git+https://github.com/tarrow/canary-perch.git",
+    "commander": "^2.9.0"
+  }
+}
