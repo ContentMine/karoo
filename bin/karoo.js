@@ -1,6 +1,7 @@
 var program = require('commander')
 
-program.command('reset-facts <index>', 'Delete the facts index <index> (if it exists) and remap it')
-.command('reset-papers <index>', 'Delete the fulltext paper index <index> (if it exists) and remap it')
+program.command('reset-facts', 'Delete the facts index <index> (if it exists) and remap it')
+.command('reset-papers', 'Delete the fulltext paper index <index> (if it exists) and remap it')
+.command('load-papers', 'Loads papers froma given directory into an index')
 
 program.parse(process.argv)
