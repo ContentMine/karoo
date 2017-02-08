@@ -17,4 +17,4 @@ function done () {
   debug('paper uploading done')
 }
 
-canaryPerch.loadEuPMCFullTexts(program.ctree, [program.host], program.index, done)
+canaryPerch.index.loadEuPMCFullTexts(program.ctree, [program.host], program.index, done)

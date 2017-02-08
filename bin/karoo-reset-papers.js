@@ -11,4 +11,4 @@ function done () {
   debug('Deleted and Mapped Paper index')
 }
 
-canaryPerch.deleteAndMapUnstructuredPaperIndex(undefined, [program.host], program.index, done)
+canaryPerch.index.deleteAndMapUnstructuredPaperIndex(undefined, [program.host], program.index, done)

@@ -11,4 +11,4 @@ function done () {
   debug('Deleted and Mapped Fact index')
 }
 
-canaryPerch.deleteAndMapFactIndex(undefined, [program.host], program.index, done)
+canaryPerch.index.deleteAndMapFactIndex(undefined, [program.host], program.index, done)
