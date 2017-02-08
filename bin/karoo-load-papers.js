@@ -1,6 +1,7 @@
 var program = require('commander')
 var canaryPerch = require('canary-perch')
 var debug = require('debug')('karoo')
+var auth = require('../lib/authini')
 
 program.option('-e --host <host>', 'ElasticSearch host (including port)', {required: true})
 .option('-c --ctree <ctree>', 'CTree to upload', {required: true})
