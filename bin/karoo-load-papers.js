@@ -10,7 +10,8 @@ program.parse(process.argv)
 
 debug('Uploading papers to: ' + program.host +
 ' from directory: ' + program.ctree +
-' to index: ' + program.index)
+' to index: ' + program.index +
+'with document type: ' + program.type)
 
 function done () {
   debug('paper uploading done')
