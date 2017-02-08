@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "canary-perch": "git+https://github.com/tarrow/canary-perch.git",
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "ini": "^1.3.4"
   }
 }

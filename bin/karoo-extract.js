@@ -8,8 +8,13 @@ program.option('-e --host <host>', 'ElasticSearch host (including port)', {requi
 .option('-x --input-type <input-type>', 'elastic search input document type')
 .option('-y --output-type <output-type>', 'elastic seach output document type')
 .option('-d --dict-dir <dict-dir>', 'dictionary directory', {required: true})
+.option('-f --auth-file <auth-file>', 'ini file to read auth credentials from')
 
 program.parse(process.argv)
+
+if (program.authFile) {
+  program.host = auth(program.host, program.authFile)
+}
 
 var inputType = program.inputType ? program.inputType : 'unstructured'
 var outputType = program.outputType ? program.outputType : 'snippets'

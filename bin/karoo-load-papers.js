@@ -5,8 +5,13 @@ var debug = require('debug')('karoo')
 program.option('-e --host <host>', 'ElasticSearch host (including port)', {required: true})
 .option('-c --ctree <ctree>', 'CTree to upload', {required: true})
 .option('-i --index <index>', 'index to load papers into', {required: true})
+.option('-f --auth-file <auth-file>', 'ini file to read auth credentials from')
 
 program.parse(process.argv)
+
+if (program.authFile) {
+  program.host = auth(program.host, program.authFile)
+}
 
 debug('Uploading papers to: ' + program.host +
 ' from directory: ' + program.ctree +
