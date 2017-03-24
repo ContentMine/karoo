@@ -18,7 +18,7 @@ if (program.authFile) {
 }
 
 var inputType = program.inputType ? program.inputType : 'unstructured'
-var outputType = program.outputType ? program.outputType : 'snippets'
+var outputType = program.outputType ? program.outputType : 'snippet'
 
 debug(program.dictDir)
 
