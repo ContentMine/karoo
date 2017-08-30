@@ -10,6 +10,7 @@ program.option('-e --host <host>', 'ElasticSearch host (including port)', {requi
 .option('-y --output-type <output-type>', 'elastic seach output document type')
 .option('-d --dict-dir <dict-dir>', 'dictionary directory', {required: true})
 .option('-f --auth-file <auth-file>', 'ini file to read auth credentials from')
+.option('-w --whitelist <whitelist>', 'whitelist of dictionaries. If set only these dictionaries will be extracted')
 
 program.parse(process.argv)
 
@@ -29,5 +30,7 @@ var extractor = new canaryPerch.extract([program.host],
   outputType,
   program.dictDir
 )
+var whitelist = Array.isArray(program.whitelist) ? program.whitelist : [program.whitelist]
+whitelist = program.whitelist ? whitelist : undefined
 
-extractor.readDictionaries()
+extractor.readDictionaries(whitelist)
